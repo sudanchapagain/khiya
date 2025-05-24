@@ -1,9 +1,13 @@
 [package]
-name = "rouille_examples"
+name = "khiya_examples"
 version = "0.1.0"
-edition = "2018"
+edition = "2024"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-rouille = { path = "../rouille_proc_macro/" }
+khiya_proc_macro = { path = "../khiya_proc_macro/"}
+
+[[example]]
+name = "main"
+path = "src/main.rs"

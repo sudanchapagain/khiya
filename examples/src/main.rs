@@ -1,85 +1,32 @@
-rouille::rouille! {
-    externe cagette rouille;
+use khiya_proc_macro::nepali;
 
-    utilisons std::collections::Dictionnaire comme Dico;
-
-    convention CléValeur {
-        fonction écrire(&soi, clé: Chaîne, valeur: Chaîne);
-        fonction lire(&soi, clé: Chaîne) -> Résultat<PeutÊtre<&Chaîne>, Chaîne>;
+nepali! {
+    sar prakriya udaran() {
+        paribhasa x = 5;
+        paribhasa y = 3;
+        paribhasa uttar = x * y;
+        chappankti!("{} guna {} = {}", x, y, uttar);
     }
 
-    statique mutable DICTIONNAIRE: PeutÊtre<Dico<Chaîne, Chaîne>> = Rien;
-
-    structure Concrète;
-
-    réalisation CléValeur pour Concrète {
-        fonction écrire(&soi, clé: Chaîne, valeur: Chaîne) {
-            soit dico = dangereux {
-                DICTIONNAIRE.prendre_ou_insérer_avec(Défaut::défaut)
-            };
-            dico.insérer(clé, valeur);
+    सार्वजनिक प्रक्रिया दोहोर्याउ() {
+        परिभाषा परिवर्तनशील जम्मा = 0;
+        परिभाषा परिवर्तनशील i = 1;
+        जबसम्म i <= 5 {
+            जम्मा = जम्मा + i;
+            i = i + 1;
         }
-        fonction lire(&soi, clé: Chaîne) -> Résultat<PeutÊtre<&Chaîne>, Chaîne> {
-            si soit Quelque(dico) = dangereux { DICTIONNAIRE.en_réf() } {
-                Bien(dico.lire(&clé))
-            } sinon {
-                Arf("fetchez le dico".vers())
-            }
-        }
+        छापपङ्क्ति!("जम्मा: {}", जम्मा);
     }
 
-    public(cagette) fonction peut_etre(i: u32) -> PeutÊtre<Résultat<u32, Chaîne>> {
-        si i % 2 == 1 {
-            si i == 42 {
-                Quelque(Arf(Chaîne::depuis("merde")))
-            } sinon {
-                Quelque(Bien(33))
-            }
-        } sinon {
-            Rien
-        }
+    sarbajanik prakriya udaran_dui(sankhya: i32) -> i32 {
+        sankhya * sankhya
     }
+}
 
-    asynchrone fonction exemple() {
-    }
+fn main() {
+    udaran();
+    दोहोर्याउ();
 
-    asynchrone fonction exemple2() {
-        exemple().attend;
-    }
-
-    fonction principale() {
-        soit mutable x = 31;
-
-        selon x {
-            42 => {
-                affiche!("omelette du fromage")
-            }
-            _ => affiche!("voila")
-        }
-
-        pour i de 0..10 {
-            soit val = boucle {
-                arrête i;
-            };
-
-            tant que x < val {
-                x += 1;
-            }
-
-            x = si soit Quelque(resultat) = peut_etre(i) {
-                resultat.déballer()
-            } sinon {
-                12
-            };
-        }
-
-        //secondaire();
-    }
-
-    #[légal(code_inaccessible)]
-    fonction secondaire() {
-        merde!("oh non"); // for the true French experience
-        calisse!("tabernacle"); // for friends speaking fr-ca
-        oups!("fetchez la vache"); // in SFW contexts
-    }
+    let sankhya = 4;
+    println!("{}", udaran_dui(sankhya));
 }
