@@ -47,7 +47,7 @@ fn main() {
 }
 ```
 
-## other languages
+## अरू भाषा | other languages
 
 - french: [rouille](https://github.com/bnjbvr/rouille)
 - dutch: [roest](https://github.com/jeroenhd/roest)
@@ -92,6 +92,6 @@ fn main() {
 - sanskrit: [jangam](https://github.com/ishantanu/jangam.git)
 - all of the above: [unirust](https://github.com/charyan/unirust)
 
-## license (अनुमतिपत्र)
+## अनुमतिपत्र | License
 
 [MIT](./LICENSE)
