@@ -9,8 +9,7 @@
 यो मजाक मात्रै होइन, यो भाषिक पहुँचको सवाल हो। अंग्रेजी आउनुपर्छ भन्ने डर हटाऔं। नेपालीमा
 सोच्ने मान्छेले कोड पनि नेपालीमै लेख्न पाइन्छ। हामीमध्ये कतिलाई अङ्ग्रेजीमा लेख्दा लेख्दा अङ्ग्रेजी
 अलि धेरै आउने पनि हुन्छ, तिनीहरूले दुःख मान्नुपर्दैन। खिया, is fully compatible with
-standard english-rust. so you can easily mix and match both in your projects,
-using the power of rust with the awesomeness of nepali.
+standard english-rust. so you can easily mix and match both in your projects.
 
 here's an example of what can be achieved with khiya:
 
