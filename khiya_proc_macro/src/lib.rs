@@ -1,5 +1,5 @@
-use proc_macro2::{Group, Ident, TokenStream, TokenTree};
 use proc_macro::TokenStream as ProcTokenStream;
+use proc_macro2::{Group, Ident, TokenStream, TokenTree};
 
 fn replace_ident(ident: Ident) -> Option<TokenTree> {
     let ident_str = ident.to_string();
@@ -26,8 +26,7 @@ fn replace_ident(ident: Ident) -> Option<TokenTree> {
         "मुख्य" | "mukhya" => "main",
         "जबसम्म" | "jabasamma" => "while",
         "परिवर्तनशील" | "parivartanshil" | "par" => "mut",
-        "छाप" | "chap" => "print",
-        "छापपङ्क्ति" | "chappankti" => "println", // chap + pankti. need a good replacement
+        "छाप" | "chhap" => "print",
         _ => &ident_str,
     };
 

@@ -5,17 +5,17 @@ nepali! {
         paribhasa x = 5;
         paribhasa y = 3;
         paribhasa uttar = x * y;
-        chappankti!("{} guna {} = {}", x, y, uttar);
+        chhap!("{} guna {} = {}", x, y, uttar);
     }
 
     सार्वजनिक प्रक्रिया दोहोर्याउ() {
         परिभाषा परिवर्तनशील जम्मा = 0;
         परिभाषा परिवर्तनशील i = 1;
         जबसम्म i <= 5 {
-            जम्मा = जम्मा + i;
-            i = i + 1;
+            जम्मा += i;
+            i += 1;
         }
-        छापपङ्क्ति!("जम्मा: {}", जम्मा);
+        छाप!("जम्मा: {}", जम्मा);
     }
 
     sarbajanik prakriya udaran_dui(sankhya: i32) -> i32 {
